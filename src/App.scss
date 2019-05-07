@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Tulpen+One');
+$primary-color: #1C2833;
+$secondary-color: #17202A;
+$light-color: #808B96;
+$text-color: #EAECEE;
+$sidebar-color: #212f3d;
+$button-color: #2C3E50;
+
+body {
+  background-color: $primary-color;
+  font-family: 'Poiret One';
+}
+
+.home {
+  .photos {
+    margin-left: 350px;
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+  h4 {
+    text-align: center;
+    color: $text-color;
+    margin-left: 15%;
+  }
+}
+
+.navbar {
+  position: fixed;
+  height: 52px;
+  background-color: $primary-color;
+  width: 100%;
+  box-shadow: 1px 1px 10px $secondary-color;
+  color: white;
+  z-index: 10;
+
+  .logo {
+    position: absolute;
+    padding: 10px 10px 0;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Tulpen One';
+    cursor: default;
+  }
+
+  .search {
+    float: right;
+    width: 22%;
+    padding: 4px;
+    border-bottom: 1px solid $light-color;
+    margin-right: 10px;
+    margin-top: 12px;
+  }
+
+  input {
+    border: none;
+    width: 80%;
+    background-color: $primary-color;
+    color: $text-color;
+    padding-left: 6px;
+    font-size: 1em;
+  }
+
+  ::placeholder {
+    color: $light-color;
+    opacity: 1;
+    font-family: 'Poiret One';
+    font-weight: bold;
+  }
+
+  input:focus {
+    outline: none
+  }
+
+  input:hover {
+    cursor: text
+  }
+
+  .search-icon {
+    font-size: 1.3em;
+    margin-right: 3px;
+    color: $light-color;
+    float: right;
+  }
+}
+
+.sidenav {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background-color: $sidebar-color;
+  color: $text-color;
+  box-shadow: 1px 1px 10px $secondary-color;
+  text-align: center;
+  padding-top: 80px;
+
+  img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 1px 4px 10px #111;
+  }
+
+  h3 {
+    margin-bottom: 50px;
+  }
+
+  button{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px #111;
+    transition: 1s ease;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 1px 1px 5px $light-color;
+    transition: 1s ease-out;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 23%;
+  padding: 0 4px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+}
+
+// Media queries
+@media(max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media(max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
