@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Tulpen+One');
+
 $primary-color: #1C2833;
 $secondary-color: #17202A;
 $light-color: #808B96;
@@ -134,6 +135,24 @@ body {
   img {
     margin-top: 8px;
     vertical-align: middle;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  .view-image {
+    margin-top: 8%;
+    height: 100%;
+    width: 500px;
+  }
+
+  img {
+    max-width: 75%;
+    height:auto;
   }
 }
 

@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 
 class ViewImage extends Component {
   render() {
-    const { imageUrl } = this.props;
+    // TODO: get url from redux store
+    const {state: { url }} = this.props.location;
     return (
-      <div className="view-image">
-        <img src={imageUrl}/>
-      </div>
+      <div className="flex-container">
+        <div className="view-image">
+          <img src={url}/>
+        </div>
+      </div> 
     );
   }
 }
 
 ViewImage.propTypes = {
-  imageUrl: PropTypes.string
+  location: PropTypes.object
 }
 
 export default ViewImage;

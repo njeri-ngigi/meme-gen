@@ -1,5 +1,5 @@
 import React from 'react';
-import { logoUrl } from './constants';
+import { logoUrl } from '../utils/constants';
 import Categories from './categories';
 
 const sidebar = () => (
