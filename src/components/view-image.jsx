@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class ViewImage extends Component {
   render() {
-    // TODO: get url from redux store
-    const {state: { url }} = this.props.location;
+    const { url } = this.props;
     return (
       <div className="flex-container">
         <div className="view-image">
@@ -15,8 +15,12 @@ class ViewImage extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  url: state.url
+})
+
 ViewImage.propTypes = {
-  location: PropTypes.object
+  url: PropTypes.string
 }
 
-export default ViewImage;
+export default connect(mapStateToProps)(ViewImage);

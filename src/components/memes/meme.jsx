@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import ACTIONS from '../../redux/actions';
 
-
-// TODO: use onclick handler to set url when image is clicked.
-const meme = ({ images }) =>  (
+const meme = ({ images, dispatch }) => (
   <div className="column">
     {
       images.map((image)=>(
-        <Link to={{
-          pathname: "/image",
-          state: {
-            url: image.url
-          }
-          }} key={image.name}>
-          <img src={image.url} style={{width:"100%"}}/>
+        <Link to="/image" key={image.name}>
+          <img 
+            src={image.url}
+            style={{width:"100%"}}
+            onClick={() => dispatch(ACTIONS.setUrl(image.url))}/>
         </Link>
       ))
     }
@@ -23,7 +21,8 @@ const meme = ({ images }) =>  (
 
 meme.displayName = 'meme';
 meme.propTypes = {
-  images: PropTypes.object
+  images: PropTypes.array,
+  dispatch: PropTypes.func
 }
 
-export default meme;
+export default connect()(meme);

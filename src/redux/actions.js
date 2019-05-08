@@ -4,7 +4,7 @@ const Types = {
 
 const setUrl = url => ({
   type: Types.SET_URL,
-  payload: url
+  url
 })
 
 export default {

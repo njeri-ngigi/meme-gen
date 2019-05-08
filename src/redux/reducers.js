@@ -8,7 +8,7 @@ const defaultState = {
 const MemesReducer = (state = defaultState, action) => {
   switch(action.type) {
     case ACTIONS.Types.SET_URL:
-      return {...state, url: action.payload.url}
+      return { ...state, url: action.url }
 
     default:
       return state;
