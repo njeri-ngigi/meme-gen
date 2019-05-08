@@ -138,21 +138,65 @@ body {
   }
 }
 
-.flex-container {
+.view-image {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 
-  .view-image {
+  div {
+    line-height: 75px;
+    margin: 30px;
+  }
+
+  .image {
     margin-top: 8%;
     height: 100%;
     width: 500px;
   }
 
   img {
-    max-width: 75%;
+    max-width: 80%;
     height:auto;
+    box-shadow: 1px 1px 15px #111;
+  }
+
+  .back-icon {
+    color: $text-color;
+    font-size: 2.5em;
+    padding: 10px;
+    background-color: $sidebar-color;
+    box-shadow: 2px 1px 4px #111;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+    text-align: center;
+    margin-right: 140px;
+    opacity: 0.8;
+  }
+
+  .back-icon:hover {
+    box-shadow: 2px 1px 5px $light-color;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+  }
+}
+
+.share {
+  color: $text-color;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+
+  .icon {
+    margin: 15px;
+    transition: 1s ease-out;
+  }
+  .icon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: $light-color
   }
 }
 

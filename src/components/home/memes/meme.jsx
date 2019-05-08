@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ACTIONS from '../../redux/actions';
+import ACTIONS from '../../../redux/actions';
 
 const meme = ({ images, dispatch }) => (
   <div className="column">

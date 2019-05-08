@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
 import Memes from './memes/memes';
-import mockImages from '../utils/mockimages';
+import mockImages from '../../utils/mockimages';
 
 class Home extends Component {
   render() {
