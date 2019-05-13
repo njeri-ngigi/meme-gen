@@ -4,7 +4,7 @@ import Categories from './categories';
 
 const sidebar = () => (
   <div className="sidenav">
-    <img src={logoUrl} title="Cute puppa"/>
+    <img src={logoUrl} alt="Cute puppa"/>
     <h3>Memes are around us</h3>
     <Categories className="categories"/>
   </div>

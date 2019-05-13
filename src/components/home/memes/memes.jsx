@@ -16,7 +16,7 @@ const memes = ({ images }) => {
 
 memes.displayName = 'memes';
 memes.propTypes = {
-  images: PropTypes.object
+  images: PropTypes.array
 }
 
 export default memes;

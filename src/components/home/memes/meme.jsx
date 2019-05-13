@@ -7,12 +7,15 @@ import ACTIONS from '../../../redux/actions';
 const meme = ({ images, dispatch }) => (
   <div className="column">
     {
-      images.map((image)=>(
-        <Link to="/image" key={image.name}>
+      images.map(({ name, image })=>(
+        <Link to="/image" key={name}>
           <img 
-            src={image.url}
+            src={image}
             style={{width:"100%"}}
-            onClick={() => dispatch(ACTIONS.setUrl(image.url))}/>
+            alt={name}
+            onClick={() => dispatch(
+              ACTIONS.setUrl({ url: image, name }))}
+          />
         </Link>
       ))
     }

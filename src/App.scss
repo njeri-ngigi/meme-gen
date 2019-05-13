@@ -21,7 +21,12 @@ body {
   h4 {
     text-align: center;
     color: $text-color;
-    margin-left: 15%;
+    margin-left: 25%;
+  }
+  .loader {
+    height: 100%;
+    padding: 30%;
+    text-align: center;
   }
 }
 
@@ -118,6 +123,10 @@ body {
     opacity: 0.9;
     box-shadow: 1px 1px 5px $light-color;
     transition: 1s ease-out;
+  }
+
+  button:focus {
+    outline: none;
   }
 }
 

@@ -7,7 +7,7 @@ import Share from './share';
 
 class ViewImage extends Component {
   render() {
-    const { url } = this.props;
+    const {url: { url, name }} = this.props;
     return (
       <div className="view-image">
         <Link to="/">
@@ -16,7 +16,7 @@ class ViewImage extends Component {
           </div>
         </Link>
         <div className="image">
-          <img src={url}/>
+          <img src={url} alt={name}/>
         </div>
         <div className="share-icons">
           <Share/>
@@ -31,7 +31,7 @@ const mapStateToProps = state => ({
 })
 
 ViewImage.propTypes = {
-  url: PropTypes.string
+  url: PropTypes.object
 }
 
 export default connect(mapStateToProps)(ViewImage);
